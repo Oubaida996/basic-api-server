@@ -24,8 +24,11 @@ describe("server test", () => {
         expect(response.status).toEqual(200);
     })
 
-    it('test on a the GET all', async () => {
-        const response = await request.get('/foods');
+    it('test on a the Post ', async () => {
+        const response = await request.post('/foods').send({
+            nameFood: "test",
+            categoryName: "test"
+         });
         // console.log("response.body", response.body);
         expect(typeof response.body).toEqual("object");
     })
@@ -43,10 +46,7 @@ describe("server test", () => {
         expect(response.text).toEqual("deleteFood");
     })
 
-    it('test on a the GET all', async () => {
-        const response = await request.get('/foods');
-        expect(response.status).toEqual(200);
-    })
+
 
 }
 
