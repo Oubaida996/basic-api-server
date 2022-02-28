@@ -18,7 +18,7 @@ let sequelizeOptions =  {
     }
   }
 
-let sequelize =new Sequelize(POSTGRES_URL ,sequelizeOptions);
+let sequelize =new Sequelize(POSTGRES_URL ,dialectOptions);
 
 // sequelize.sync({force :false}).then(()=>{
 //     console.log('created');

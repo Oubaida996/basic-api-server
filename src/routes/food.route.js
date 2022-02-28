@@ -22,9 +22,6 @@ router.get('/foods', async (req, res) => {
    // res.send(foods);
    // json return value as object but send return the value as string
 
-
-
-
 });
 
 
@@ -43,7 +40,7 @@ router.get('/foods/:id', async (req, res) => {
 
 
 
-router.post('/food', async (req, res) => {
+router.post('/foods', async (req, res) => {
    let { body } = req;
 
    let newFoods = await Foods.create(body);
