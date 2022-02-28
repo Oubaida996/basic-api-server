@@ -37,7 +37,7 @@ router.get('/foods/:id', async (req, res) => {
       }
    });
    // console.log("delete satus", res.statusCode);
-   res.send(food);
+   res.json(food);
 
 });
 
