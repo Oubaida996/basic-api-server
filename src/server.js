@@ -24,6 +24,9 @@ app.use(clothesRoute);
 // app.use(bodyParser.json());// or // app.use(express.json()); 
 
 
+app.get('/' ,(req,res)=>{
+    res.send("Home Page");
+});
 
 
 app.use(hadle500);
