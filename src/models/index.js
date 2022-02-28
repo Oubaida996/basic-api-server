@@ -7,11 +7,18 @@ require('dotenv').config();
 
 
 //prepare the connection
-const POSTGRES_URL = (process.env.DATABASE_URL);
+const POSTGRES_URL = (process.env.DATABASE_URL || "postgres://obieda:0000@localhost:5432/movie");
 
-let sequelizeOption ={};
+let sequelizeOptions =  {
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      }
+    }
+  }
 
-let sequelize =new Sequelize(POSTGRES_URL ,{});
+let sequelize =new Sequelize(POSTGRES_URL ,sequelizeOptions);
 
 sequelize.sync({force :false}).then(()=>{
     console.log('created');
