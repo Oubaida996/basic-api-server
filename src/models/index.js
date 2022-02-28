@@ -7,7 +7,7 @@ require('dotenv').config();
 
 
 //prepare the connection
-const POSTGRES_URL = (process.env.DATABASE_URL || "postgres://obieda:0000@localhost:5432/movie");
+const POSTGRES_URL = (process.env.DATABASE_URL);
 
 let sequelizeOption ={};
 
