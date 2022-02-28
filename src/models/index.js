@@ -20,11 +20,11 @@ let sequelizeOptions =  {
 
 let sequelize =new Sequelize(POSTGRES_URL ,sequelizeOptions);
 
-sequelize.sync({force :false}).then(()=>{
-    console.log('created');
-}).catch(err =>{
-    console.log("from sync" , err);
-})
+// sequelize.sync({force :false}).then(()=>{
+//     console.log('created');
+// }).catch(err =>{
+//     console.log("from sync" , err);
+// })
 
 module.exports ={
     db :sequelize,
