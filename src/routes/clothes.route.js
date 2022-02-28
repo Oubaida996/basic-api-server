@@ -30,7 +30,7 @@ router.get('/clothes/:id', async (req, res) => {
       }
    });
    // console.log("delete satus", res.statusCode);
-   res.send(clothe);
+   res.json(clothe);
 
 });
 
